@@ -1,7 +1,8 @@
 # print_schema
 
 Ever had a complex Python object and wanted to easily see its structure?
-print_schema makes it super easy to display the structure of complex dictionaries, JSONs, lists, etc
+**print_schema** makes it super easy to display the structure of complex dictionaries, JSONs, lists, etc
+It differs from pprint in that this displays the structure rather than the object itself.
 
 ## Installing
 
@@ -37,8 +38,8 @@ print_schema(my_dict, indent=3, dense=False)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 ## Acknowledgments
 
-* This project started when I started looking for an equivalent of the printSchema function available in PySpark and Scala.
+This project started when I started looking for a native Python equivalent of PySpark/Scala's printSchema() and couldn't find any :)
