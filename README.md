@@ -38,10 +38,10 @@ print_schema(my_dict, indent=3, dense=False)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/suryashekharc/print_schema/blob/master/LICENSE) file for details
 
 ## Acknowledgments
 
 This project started when I started looking for a native Python equivalent of PySpark/Scala's printSchema() and couldn't find any :)
 
-And favorite after-hours colleague Puneet Jindal for all the help.
+Much thanks to my favorite after-hours colleague Puneet Jindal for all the help.
