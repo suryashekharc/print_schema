@@ -43,3 +43,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Acknowledgments
 
 This project started when I started looking for a native Python equivalent of PySpark/Scala's printSchema() and couldn't find any :)
+
+And favorite after-hours colleague Puneet Jindal for all the help.
