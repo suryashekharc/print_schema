@@ -35,7 +35,7 @@ print_schema(my_dict, indent=3, dense=False)
 ```
 
 ### Display a list of lists as a matrix
-New in version 1.3
+New in version 1.1
 ```
 from print_schema import print_matrix
 my_arr = [[11, 312, None, 2],
