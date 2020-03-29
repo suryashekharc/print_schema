@@ -6,7 +6,7 @@ with open(os.path.join(os.path.dirname(__file__), "README.md"), 'r') as f:
 
 setup(
     name='print_schema',
-    version='1.1.0',
+    version='1.1.1',
     packages=['print_schema'],
     url='https://github.com/suryashekharc/print_schema',
     license='MIT',

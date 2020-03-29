@@ -142,18 +142,18 @@ def print_matrix(array: list, index: bool = True) -> None:
     row_len = len(str(len(array)))  # If there are 6470 rows, row_len is 4
     max_space_len = max(max([len(str(item)) for row in array for item in row]), row_len)  # Used to fix indent spaces
     if not index:
-        print('\n'.join([''.join(['{:>{}}'.format(str(item), max_space_len) for item in row])
+        print('\n'.join([' '.join(['{:>{}}'.format(str(item), max_space_len) for item in row])
                          for row in array]))
     else:
-        print('{:{}} |'.format('', row_len), end='')
+        print('{:{}} |'.format(' ', row_len), end='')
         for col_index in range(max([len(row) for row in array])):
-            print('{:{}}'.format(col_index, max_space_len), end='')
+            print(' {:{}}'.format(col_index, max_space_len), end='')
         print()
         print('{:{}} |'.format('-' * row_len, row_len), end='')
-        print('{:{}}'.format('-' * max_space_len, max_space_len) * max(
+        print('{:{}}'.format('-' * (max_space_len+1), max_space_len) * max(
             [len(row) for row in array]))
         for row_index, row in enumerate(array):
-            print('{:{}} |'.format(row_index, row_len), end='')
+            print('{:{}} |'.format(row_index, row_len), end=' ')
             for val in row:
-                print('{:>{}}'.format(str(val), max_space_len), end='', sep=' ')
+                print('{:>{}}'.format(str(val), max_space_len), end=' ', sep=' ')
             print()

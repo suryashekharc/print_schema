@@ -1,7 +1,8 @@
 # print_schema
 
 Ever had a complex Python object and wanted to easily see its structure?
-**print_schema** makes it super easy to display the structure of complex dictionaries, JSONs, lists, etc
+
+**print_schema** makes it super easy to *display the structure* of complex dictionaries, JSONs, lists, etc
 It differs from pprint in that this displays the structure rather than the object itself.
 
 *New:* Use **print_matrix** to display a 2D array (list of lists) in the matrix form.
@@ -10,7 +11,7 @@ It differs from pprint in that this displays the structure rather than the objec
 
 You can download this package from pip:
 ```
-pip install print_schema
+pip install print-schema
 ```
 
 ### How to use this package
@@ -33,6 +34,7 @@ my_dict = {"bts": {"members": 7,
                        (4, 5): "another random tuple"}}
 print_schema(my_dict, indent=3, dense=False)
 ```
+![print_schema output](https://imgur.com/MZlhWLX.jpg)
 
 ### Display a list of lists as a matrix
 New in version 1.1
@@ -44,6 +46,7 @@ my_arr = [[11, 312, None, 2],
           [55, 1.5, 854, 6]]
 print_matrix(my_arr, index=True)
 ```
+![print_matrix output](https://imgur.com/OpOnQXC.jpg)
 
 ## Author
 
