@@ -33,6 +33,7 @@ my_dict = {"bts": {"members": 7,
                        (4, 5): "another random tuple"}}
 print_schema(my_dict, indent=3, dense=False)
 ```
+![print_schema output](https://imgur.com/MZlhWLX.jpg)
 
 ### Display a list of lists as a matrix
 New in version 1.1
@@ -44,6 +45,7 @@ my_arr = [[11, 312, None, 2],
           [55, 1.5, 854, 6]]
 print_matrix(my_arr, index=True)
 ```
+![print_matrix output](https://imgur.com/OpOnQXC.jpg)
 
 ## Author
 
