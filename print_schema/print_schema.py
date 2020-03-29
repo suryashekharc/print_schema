@@ -115,3 +115,45 @@ def print_schema(obj, indent: int = 4, dense: bool = False, level: int = 0) -> N
         print("Constant type: {}".format(is_which_const(obj)))
     else:
         print("Data-type not currently supported. Sorry!")
+
+
+def is_valid_matrix(array: list) -> bool:  # Returns False if array is not a list of lists
+    if type(array) is not list:
+        print("Error: array is not a list")
+        return False
+    for row in array:
+        if type(row) is not list:
+            print("Error: row in array is not a list")
+            return False
+    if len(array) < 1:
+        return False
+    return True
+
+
+def print_matrix(array: list, index: bool = True) -> None:
+    """ Pretty print a 2D array
+
+    :param array: List of lists, the array to print
+    :param index: Boolean, True will print array indices
+    :return:      The array, displayed as a matrix
+    """
+    if not is_valid_matrix(array):
+        return
+    row_len = len(str(len(array)))  # If there are 6470 rows, row_len is 4
+    max_space_len = max(max([len(str(item)) for row in array for item in row]), row_len)  # Used to fix indent spaces
+    if not index:
+        print('\n'.join([''.join(['{:>{}}'.format(str(item), max_space_len) for item in row])
+                         for row in array]))
+    else:
+        print('{:{}} |'.format('', row_len), end='')
+        for col_index in range(max([len(row) for row in array])):
+            print('{:{}}'.format(col_index, max_space_len), end='')
+        print()
+        print('{:{}} |'.format('-' * row_len, row_len), end='')
+        print('{:{}}'.format('-' * max_space_len, max_space_len) * max(
+            [len(row) for row in array]))
+        for row_index, row in enumerate(array):
+            print('{:{}} |'.format(row_index, row_len), end='')
+            for val in row:
+                print('{:>{}}'.format(str(val), max_space_len), end='', sep=' ')
+            print()

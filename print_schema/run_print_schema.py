@@ -1,6 +1,15 @@
 import time
 
-from print_schema import print_schema
+from print_schema import print_schema, print_matrix
+
+
+def run_matrix(my_arr=None):
+    if my_arr is None:
+        my_arr = [[11, 312, None, 2], [93, -45, 10], [-100.3, 8, 192, 5], [55, 1.5, 854, 6]]
+    print("With index=False:")
+    print_matrix(my_arr, index=False)
+    print("With index=True:")
+    print_matrix(my_arr)
 
 
 def run_json(json_path="https://transit.land/api/v1/routes.geojson?"
@@ -43,6 +52,9 @@ if __name__ == "__main__":
     time.sleep(2)
     print("Running list...")
     run_list()
+    time.sleep(2)
+    print("Running matrix...")
+    run_matrix()
     time.sleep(2)
     print("Running JSON... (this may take some time based on your internet connection)")
     run_json()
